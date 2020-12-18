@@ -791,3 +791,15 @@ options:
     description: |
       If True, on Ussuri or later, igmp snooping will be set on OVS and OVN
       control plane will learn about multicast traffic going on in the cluster.
+  enable-ipv6-pd:
+    type: boolean
+    default: False
+    description: If True, on Ussuri or later, enable IPv6 prefix delegation.
+  pd-dhcp-driver:
+    type: string
+    default:
+    description: |
+      On Ussuri or later, configure alternative IPv6 prefix delegation DHCP
+      driver if you are not using the default dibbler-based driver.
+      .
+      NOTE: Use only when "enable-ipv6-pd" is set to "True".

@@ -487,6 +487,8 @@ class NeutronCCContext(context.NeutronContext):
         ctxt['quota_health_monitors'] = config('quota-health-monitors')
         ctxt['quota_router'] = config('quota-router')
         ctxt['quota_floatingip'] = config('quota-floatingip')
+        ctxt['ipv6_pd_enabled'] = config('enable-ipv6-pd')
+        ctxt['pd_dhcp_driver'] = config('pd-dhcp-driver')
 
         n_api_settings = self.get_neutron_api_rel_settings()
         if n_api_settings:

@@ -477,6 +477,8 @@ class NeutronCCContextTest(CharmTestCase):
                 'neutron.services.loadbalancer.plugin.LoadBalancerPlugin,'
                 'neutron.services.vpn.plugin.VPNDriverPlugin,'
                 'neutron.services.metering.metering_plugin.MeteringPlugin'),
+            'ipv6_pd_enabled': False,
+            'pd_dhcp_driver': None,
         }
         napi_ctxt = context.NeutronCCContext()
         self.os_release.return_value = 'icehouse'
@@ -530,6 +532,8 @@ class NeutronCCContextTest(CharmTestCase):
             'router_scheduler_driver': (
                 'neutron.scheduler.l3_agent_scheduler'
                 '.AZLeastRoutersScheduler'),
+            'ipv6_pd_enabled': False,
+            'pd_dhcp_driver': None,
         }
         napi_ctxt = context.NeutronCCContext()
         self.maxDiff = None
@@ -637,6 +641,8 @@ class NeutronCCContextTest(CharmTestCase):
                 'neutron.services.loadbalancer.plugin.LoadBalancerPlugin,'
                 'neutron.services.vpn.plugin.VPNDriverPlugin,'
                 'neutron.services.metering.metering_plugin.MeteringPlugin'),
+            'ipv6_pd_enabled': False,
+            'pd_dhcp_driver': None,
         }
         napi_ctxt = context.NeutronCCContext()
         self.os_release.return_value = 'icehouse'
@@ -695,6 +701,8 @@ class NeutronCCContextTest(CharmTestCase):
                 'neutron.services.loadbalancer.plugin.LoadBalancerPlugin,'
                 'neutron.services.vpn.plugin.VPNDriverPlugin,'
                 'neutron.services.metering.metering_plugin.MeteringPlugin'),
+            'ipv6_pd_enabled': False,
+            'pd_dhcp_driver': None,
         }
         napi_ctxt = context.NeutronCCContext()
         with patch.object(napi_ctxt, '_ensure_packages'):
@@ -756,6 +764,8 @@ class NeutronCCContextTest(CharmTestCase):
             'vni_ranges': '1001:2000',
             'extension_drivers': 'port_security',
             'service_plugins': 'router,firewall,lbaas,vpnaas,metering',
+            'ipv6_pd_enabled': False,
+            'pd_dhcp_driver': None,
         }
         napi_ctxt = context.NeutronCCContext()
         self.os_release.return_value = 'kilo'
